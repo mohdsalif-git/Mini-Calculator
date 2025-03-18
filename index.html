@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/Mini-Calculator/style.css">
+</head>
+<body>
+    <div class="box">
+        <input class="inp"  id="inp1" type="number"><input id="inp2" class="inp" type="number"><span>=</span><input type="none" id="result">
+ 
+        <button class="btns" id="add" onclick="add()">Add</button><button id="sub" class="btns" onclick="sub()">Sub</button><button id="mul" class="btns" onclick="mul()">mul</button><button id="div" class="btns"onclick="div()">Div</button> <br>
+        <button id="submit" type="button" onclick="resert()" >resert</button>
+        <label class="dev">by mohamed salif</label>
+    </div>
+    
+
+    <script>
+        var input1 = document.getElementById("inp1")
+        var input2 = document.getElementById("inp2")
+        var result = document.getElementById("result")
+
+        function add(){
+            let inp1 = Number(input1.value)
+            let inp2 = Number(input2.value)
+            
+            var op = inp1+inp2
+            
+            result.value= op
+        }
+        function sub(){
+            let inp1 = Number(input1.value)
+            let inp2 = Number(input2.value)
+            
+            var op = inp1 - inp2
+            
+            result.value= op
+        }
+
+        function mul(){
+            let inp1 = Number(input1.value)
+            let inp2 = Number(input2.value)
+            
+            var op = inp1 * inp2
+            
+            result.value= op
+        }
+
+        function div(){
+            let inp1 = Number(input1.value)
+            let inp2 = Number(input2.value)
+            
+            var op = inp1 / inp2
+            
+            result.value= op
+        }
+        function resert(){
+           
+
+            input1.value = 0
+            input2.value = 0
+            result.value= 0
+
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
